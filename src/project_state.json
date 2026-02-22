@@ -1,18 +1,21 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "MONKEYWORX COLLECTIVE website - industrial cyberpunk aesthetic with matte black background, neon green and hot pink accents. Features: team dossier grid, Holi Grail ticket tiers (5 levels from ₹449 to ₹78,999), corporate events page, hero video with glitch effects, and Swiggy Scenes booking integration.",
+  "projectStateVersion": 7,
+  "summary": "MONKEYWORX COLLECTIVE website - ultra-modern cyberpunk/industrial tech noir aesthetic with pitch black (#000000) background, animated VHS static overlay (5-10% opacity), neon cyan and hot pink accents. Features: geometric monkey logo with RGB split/flicker effects, tactical UI corner borders, \"THE RARE HOLI GRAIL EVENT\" hero headline with chromatic aberration, Holi Grail poster in tactical glowing border, team dossier grid, 5-tier ticketing system (₹449 to ₹78,999), corporate events page, and Swiggy Scenes booking integration.",
   "architectural_notes": [
     "Industrial cyberpunk design: matte black (#000000) background with neon green (#39FF14) and hot pink (#FF69B4) accents",
     "Typography: Industrial sans-serif and monospaced system fonts for technical aesthetic",
     "Glitch effects throughout UI for cyberpunk atmosphere",
     "Responsive design for team grid, ticketing tiers, and events sections",
     "Card-style UI components with neon glow effects for cyberpunk aesthetic",
-    "Logo positioning at top as primary branding element with enhanced visibility"
+    "Ultra-modern cyberpunk/industrial tech noir aesthetic with animated VHS static overlay (5-10% opacity) on solid black background",
+    "Tactical UI corner borders (targeting reticle style) for all containers",
+    "Random horizontal line glitches across background and over images for digital distortion",
+    "Transparent neon cyan bordered buttons that turn solid pink with digital distortion on hover",
+    "Fade-in scroll animations with vertical jitter effect (low-latency neural link loading aesthetic)"
   ],
   "known_issues": [],
-  "isFixRequest": true,
-  "imageRequirements": "## Edit Images\n- Add cyberpunk neon glow effects to the MonkeyWorx logo with enhanced contrast (monkeyworx-logo.png > monkeyworx-logo-neon.png)\n- Transform Holi Grail poster into card-style design with neon border glow and improved text visibility (holi-grail-poster.png > holi-grail-card.png)",
+  "isFixRequest": false,
   "existing_features": [
     {
       "id": "feature-establish-global-design-system-with-matte-black-000000-background-neon-green-39ff14-and-hot-pink-ff69b4-accent-colors-industrial-sans-serif-and-monospaced-system-fonts-throughout-the-application",
@@ -125,6 +128,86 @@
         "REQ-14"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-animated-vhs-static-digital-noise-overlay-at-5-10-opacity-on-top-of-the-solid-000000-background-to-create-a-live-terminal-effect",
+      "title": "Add animated VHS static/digital noise overlay at 5-10% opacity on top of the solid #000000 background to create a live terminal effect",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-text-based-logo-in-the-fixed-header-with-the-uploaded-geometric-monkey-icon-monkeyworx-1-png-followed-by-monkeyworx-text-in-a-minimalistic-cyberpunk-font-collective-underneath-and-co-as-a-smaller-monospaced-subscript-aligned-right-below-collective",
+      "title": "Replace the current text-based logo in the fixed header with the uploaded geometric monkey icon (monkeyworx-1.png), followed by 'MONKEYWORX' text in a minimalistic cyberpunk font, 'COLLECTIVE' underneath, and '& CO.' as a smaller monospaced subscript aligned right below 'COLLECTIVE'",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-subtle-rgb-split-flicker-glitch-effects-and-neon-cyan-hot-pink-glow-to-the-logo-icon-text-combination",
+      "title": "Apply subtle RGB split/flicker glitch effects and neon cyan/hot pink glow to the logo (icon + text combination)",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-hero-section-headline-the-rare-holi-grail-event-above-the-holi-grail-poster-card-with-heavy-digital-glitch-font-styling-and-chromatic-aberration-effect-red-blue-color-bleeding",
+      "title": "Add hero section headline 'THE RARE HOLI GRAIL EVENT' above the Holi Grail poster card with heavy digital glitch font styling and chromatic aberration effect (red/blue color bleeding)",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-frame-the-holi-grail-poster-copy-of-copy-of-grail-1-png-in-a-tactical-glowing-border-resembling-a-digital-dossier-or-mission-file-positioned-below-the-the-rare-holi-grail-event-headline",
+      "title": "Frame the Holi Grail poster (Copy of Copy of Grail-1.png) in a tactical glowing border resembling a digital dossier or mission file, positioned below the 'THE RARE HOLI GRAIL EVENT' headline",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-tactical-ui-corner-borders-targeting-reticle-style-to-all-container-elements-throughout-the-page",
+      "title": "Apply tactical UI corner borders (targeting reticle style) to all container elements throughout the page",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-random-subtle-horizontal-line-glitches-across-the-background-and-over-images-throughout-the-page",
+      "title": "Implement random, subtle horizontal line glitches across the background and over images throughout the page",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-all-interactive-buttons-to-be-transparent-with-neon-cyan-borders-turning-solid-hot-pink-with-digital-distortion-effect-on-hover",
+      "title": "Redesign all interactive buttons to be transparent with neon cyan borders, turning solid hot pink with digital distortion effect on hover",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-fade-in-scroll-animations-with-slight-vertical-jitter-effect-on-all-content-sections-as-they-enter-the-viewport",
+      "title": "Implement fade-in scroll animations with slight vertical jitter effect on all content sections as they enter the viewport",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-uploaded-geometric-monkey-logo-monkeyworx-1-png-and-monkeyworx-2-png-and-holi-grail-poster-copy-of-copy-of-grail-1-png-as-static-assets-in-frontend-public-assets-generated-for-use-in-the-logo-header-and-hero-section",
+      "title": "Store uploaded geometric monkey logo (monkeyworx-1.png and monkeyworx-2.png) and Holi Grail poster (Copy of Copy of Grail-1.png) as static assets in frontend/public/assets/generated for use in the logo header and hero section",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -197,6 +280,54 @@
     {
       "id": "AR-12",
       "summary": "Add Instagram handle @monkeyworxcollective to site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Animated VHS static/digital noise overlay (5-10% opacity) on solid black background",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Redesign logo with geometric monkey icon + MONKEYWORX text + COLLECTIVE with & CO. subscript, RGB split/flicker glitch effects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add THE RARE HOLI GRAIL EVENT hero headline with chromatic aberration glitch effect above poster",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Tactical UI corner borders (targeting reticle style) on all containers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Random horizontal line glitches across background and images",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Transparent neon cyan buttons turning solid pink with digital distortion on hover",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Fade-in scroll animations with vertical jitter effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Frame Holi Grail poster in tactical glowing border (digital dossier style)",
       "reqIds": [],
       "status": "pending"
     }

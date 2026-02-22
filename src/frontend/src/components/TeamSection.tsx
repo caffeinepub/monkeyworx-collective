@@ -1,4 +1,30 @@
+import { useEffect, useRef, useState } from 'react';
+
 export default function TeamSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const team = [
     {
       name: 'VIKRAM',
@@ -27,7 +53,12 @@ export default function TeamSection() {
   ];
 
   return (
-    <div className="py-20 px-4 bg-matteBlack">
+    <div 
+      ref={sectionRef}
+      className={`py-20 px-4 bg-matteBlack transition-all duration-700 ${
+        isVisible ? 'opacity-100 fade-in-jitter' : 'opacity-0'
+      }`}
+    >
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-industrial font-bold tracking-wider text-neonGreen mb-4">
@@ -43,7 +74,7 @@ export default function TeamSection() {
           {team.map((member) => (
             <div
               key={member.id}
-              className="group relative border-2 border-neonGreen/30 bg-matteBlack hover:border-neonGreen transition-all duration-300 overflow-hidden"
+              className="group relative tactical-border bg-matteBlack hover:border-neonGreen transition-all duration-300 overflow-hidden"
             >
               {/* Dossier Header */}
               <div className="bg-neonGreen/10 border-b border-neonGreen/30 p-3">
@@ -53,13 +84,14 @@ export default function TeamSection() {
                 </div>
               </div>
 
-              {/* Portrait */}
+              {/* Portrait with Glitch Overlay */}
               <div className="relative aspect-square overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 glitch-image"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
+                <div className="absolute inset-0 horizontal-glitch-overlay"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-matteBlack via-transparent to-transparent opacity-60"></div>
               </div>
 

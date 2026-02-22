@@ -8,9 +8,15 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-matteBlack text-foreground">
+    <div className="min-h-screen bg-matteBlack text-foreground relative">
+      {/* VHS Static Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-[1] vhs-static opacity-[0.08]"></div>
+      
+      {/* Horizontal Line Glitches */}
+      <div className="fixed inset-0 pointer-events-none z-[2] horizontal-glitch"></div>
+      
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <section id="home">
           <HeroSection />
         </section>

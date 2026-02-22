@@ -28,17 +28,30 @@ export default function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo with Neon Glow */}
+        <div className="flex items-center justify-between h-24">
+          {/* Logo with Icon + Text */}
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center"
+            className="flex flex-col items-start gap-1 group"
           >
-            <img
-              src="/assets/generated/monkeyworx-logo-neon.png"
-              alt="MonkeyWorx Collective"
-              className="h-12 md:h-16 w-auto logo-neon-glow"
-            />
+            <div className="flex items-center gap-3">
+              <img
+                src="/assets/monkeyworx-1.png"
+                alt="MonkeyWorx Icon"
+                className="h-12 w-12 md:h-14 md:w-14 logo-rgb-split"
+              />
+              <div className="flex flex-col">
+                <span className="text-2xl md:text-3xl font-bebas tracking-wider text-neonGreen logo-flicker">
+                  MONKEYWORX
+                </span>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-sm md:text-base font-mono tracking-widest text-gray-400">
+                    COLLECTIVE
+                  </span>
+                  <span className="text-xs font-mono text-gray-500 self-end">& CO.</span>
+                </div>
+              </div>
+            </div>
           </button>
 
           {/* Desktop Menu */}

@@ -1,7 +1,32 @@
+import { useEffect, useRef, useState } from 'react';
 import GlitchButton from './GlitchButton';
 import { Phone, Briefcase, Music, Heart, Users, Sparkles } from 'lucide-react';
 
 export default function CorporateEventsSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const services = [
     { name: 'Concerts', icon: Music },
     { name: 'Weddings', icon: Heart },
@@ -10,7 +35,12 @@ export default function CorporateEventsSection() {
   ];
 
   return (
-    <div className="py-20 px-4 bg-matteBlack">
+    <div 
+      ref={sectionRef}
+      className={`py-20 px-4 bg-matteBlack transition-all duration-700 ${
+        isVisible ? 'opacity-100 fade-in-jitter' : 'opacity-0'
+      }`}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-industrial font-bold tracking-wider text-neonGreen mb-6 glitch-text">
@@ -26,7 +56,7 @@ export default function CorporateEventsSection() {
             return (
               <div
                 key={index}
-                className="border-2 border-neonGreen/30 bg-matteBlack hover:border-neonGreen transition-all duration-300 p-8 text-center group"
+                className="tactical-border bg-matteBlack hover:border-neonGreen transition-all duration-300 p-8 text-center group"
               >
                 <Icon
                   size={48}
@@ -39,7 +69,7 @@ export default function CorporateEventsSection() {
         </div>
 
         {/* Corporate Perks */}
-        <div className="border-2 border-hotPink/30 bg-matteBlack p-8 md:p-12 mb-12">
+        <div className="tactical-border bg-matteBlack p-8 md:p-12 mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles className="text-hotPink" size={32} />
             <h3 className="text-3xl font-industrial font-bold tracking-wider text-hotPink">
@@ -53,7 +83,7 @@ export default function CorporateEventsSection() {
         </div>
 
         {/* Contact CTA */}
-        <div className="border-2 border-neonGreen bg-neonGreen/5 p-8 md:p-12 text-center">
+        <div className="tactical-border bg-neonGreen/5 p-8 md:p-12 text-center">
           <p className="font-mono text-sm uppercase tracking-widest text-gray-400 mb-4">
             For Hosting & Corporate Discounts
           </p>

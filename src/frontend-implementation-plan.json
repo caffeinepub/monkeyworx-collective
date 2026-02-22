@@ -1,126 +1,282 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Enhance cyberpunk styling with glowing card-style poster and updated branding",
+  "title": "Complete cyberpunk visual overhaul with animated VHS static, redesigned logo, tactical UI elements, and glitch effects",
   "requirements": [
     {
-      "id": "REQ-9",
-      "summary": "Transform the Holi Grail poster into a card-style booking component with cyberpunk neon glow effects",
+      "id": "REQ-15",
+      "summary": "Add animated VHS static/digital noise overlay at 5-10% opacity on top of the solid #000000 background to create a live terminal effect",
       "acceptanceCriteria": [
-        "Holi Grail poster is displayed as a prominent card component with defined borders",
-        "Card has neon glow effect using CSS box-shadow or border-glow animations",
-        "Styling uses the existing cyberpunk color palette (neon green #39FF14 and hot pink #FF69B4)",
-        "Card has elevated/raised appearance with proper depth and shadow effects"
+        "Animated VHS static overlay visible across entire page background",
+        "Overlay opacity set to 5-10% so text remains clearly readable",
+        "Animation creates subtle movement without distracting from content",
+        "Base background remains solid #000000"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HoliGrailCard.tsx",
-          "operation": "create",
-          "description": "Create a new card-style component for the Holi Grail poster featuring the edited image frontend/public/assets/holi-grail-card.png with cyberpunk card styling including elevated shadow effects, neon border glow using box-shadow with #39FF14 and #FF69B4, and a booking CTA button that uses the SwiggyBookingCTA component"
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add @keyframes animation for VHS static noise effect with randomized pixel distortion. Define animation to create continuous, subtle noise pattern that loops seamlessly."
         },
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render the new HoliGrailCard component between the HeroSection and TeamSection, creating a dedicated section for the Holi Grail event booking"
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Add CSS keyframe animations for pulsing neon glow effects on card borders and define utility classes for the cyberpunk card elevation with layered shadows"
+          "description": "Add a fixed-position overlay div as the first child of the root container with VHS static background animation. Apply 5-10% opacity, pointer-events-none, and z-index to ensure it sits above the #000000 background but below content. Preserve existing layout structure and component hierarchy."
         }
       ]
     },
     {
-      "id": "REQ-10",
-      "summary": "Relocate the MonkeyWorx logo to the top of the page as the primary branding element with neon glow effects",
+      "id": "REQ-16",
+      "summary": "Replace the current text-based logo in the fixed header with the uploaded geometric monkey icon (monkeyworx-1.png), followed by 'MONKEYWORX' text in a minimalistic cyberpunk font, 'COLLECTIVE' underneath, and '& CO.' as a smaller monospaced subscript aligned right below 'COLLECTIVE'",
       "acceptanceCriteria": [
-        "MonkeyWorx logo is positioned at the top of the page (in hero section or navigation)",
-        "Logo has neon glow effect applied (CSS filter, text-shadow, or drop-shadow)",
-        "Logo remains prominent and clearly visible as the primary brand identifier",
-        "Glow effect uses colors from the cyberpunk palette (neon green or hot pink)"
+        "Geometric monkey icon from monkeyworx-1.png displays in top-left fixed header",
+        "'MONKEYWORX' text appears below icon in cyberpunk-style font",
+        "'COLLECTIVE' text appears below 'MONKEYWORX'",
+        "'& CO.' appears as smaller monospaced text aligned right under 'COLLECTIVE'",
+        "Logo layout resembles corporate/military tech label identifier"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Add the MonkeyWorx logo using the edited image frontend/public/assets/monkeyworx-logo-neon.png at the left side of the navigation bar with proper sizing and neon glow CSS filter using drop-shadow with #39FF14"
-        },
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Remove or reduce prominence of the existing MONKEYWORX text branding since the logo now serves as the primary brand identifier in the navigation"
+          "description": "Replace the current text-based logo with a new logo component structure. Add an img element referencing frontend/public/assets/monkeyworx-1.png. Below the icon, add 'MONKEYWORX' text using Bebas Neue or similar cyberpunk font. Add 'COLLECTIVE' text below 'MONKEYWORX'. Add '& CO.' as smaller monospaced text aligned right under 'COLLECTIVE'. Maintain fixed header positioning and scroll behavior. Keep existing navigation links and mobile menu functionality unchanged."
         }
       ]
     },
     {
-      "id": "REQ-11",
-      "summary": "Adapt the Holi Grail poster design to full cyberpunk styling with improved color arrangement and visibility",
+      "id": "REQ-17",
+      "summary": "Apply subtle RGB split/flicker glitch effects and neon cyan/hot pink glow to the logo (icon + text combination)",
       "acceptanceCriteria": [
-        "Poster maintains dark background consistent with matte black (#000000) theme",
-        "All text elements have sufficient contrast and are clearly readable",
-        "Color scheme uses neon green and hot pink accents throughout the poster",
-        "Layout and typography follow industrial cyberpunk aesthetic with monospaced or industrial fonts"
+        "Logo displays subtle RGB split/chromatic aberration effect",
+        "Flicker animation triggers periodically on logo",
+        "Neon cyan and hot pink glow effects applied to logo edges",
+        "Effects are subtle enough to maintain logo readability"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add @keyframes animations for RGB split/chromatic aberration effect with red/blue channel offsets. Add periodic flicker animation with opacity variations. Define CSS classes for neon cyan and hot pink glow using drop-shadow or box-shadow filters. Ensure animations are subtle and do not compromise readability."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Apply the RGB split, flicker, and glow effect classes to the logo container or individual logo elements (icon and text). Use conditional class application or CSS pseudo-elements to trigger animations. Ensure effects apply to the entire logo group (icon + MONKEYWORX + COLLECTIVE + & CO.)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Add hero section headline 'THE RARE HOLI GRAIL EVENT' above the Holi Grail poster card with heavy digital glitch font styling and chromatic aberration effect (red/blue color bleeding)",
+      "acceptanceCriteria": [
+        "Headline 'THE RARE HOLI GRAIL EVENT' appears above Holi Grail poster",
+        "Headline uses heavy digital glitch/cyberpunk-style font",
+        "Chromatic aberration effect with red/blue color bleeding applied",
+        "Text styled as 'Deciphering System Message' with high visual impact",
+        "Headline serves as primary attention-grabbing element before poster details"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add a new headline element with text 'THE RARE HOLI GRAIL EVENT' positioned above the existing hero content. Style with heavy, uppercase, cyberpunk-style font (e.g., Bebas Neue or similar). Apply chromatic aberration effect using CSS text-shadow or pseudo-elements with red and blue offsets. Position headline to serve as primary attention-grabber before other hero content. Preserve existing hero image background and other hero elements."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define CSS class for chromatic aberration text effect using multiple text-shadow layers with red and blue color offsets. Add glitch font styling with appropriate letter-spacing, text-transform, and weight. Ensure effect creates 'Deciphering System Message' aesthetic while maintaining readability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Frame the Holi Grail poster (Copy of Copy of Grail-1.png) in a tactical glowing border resembling a digital dossier or mission file, positioned below the 'THE RARE HOLI GRAIL EVENT' headline",
+      "acceptanceCriteria": [
+        "Holi Grail poster displays below the hero headline",
+        "Poster has tactical glowing border matching digital dossier aesthetic",
+        "Border uses neon cyan/hot pink glow effects",
+        "Layout creates visual hierarchy: headline → poster details"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HoliGrailCard.tsx",
           "operation": "modify",
-          "description": "Ensure the card component uses dark matte black background (#000000), applies neon green (#39FF14) and hot pink (#FF69B4) text accents for event details, and uses industrial/monospaced fonts from the Tailwind config for all text overlays on the poster image"
+          "description": "Wrap the poster image (referencing frontend/public/assets/Copy of Copy of Grail (1080 x 1440 px)-1.png) in a container with tactical glowing border styling. Apply neon cyan and hot pink glow effects using box-shadow. Position the card to appear below the 'THE RARE HOLI GRAIL EVENT' headline. Maintain existing animated neon glow border effect if compatible, or replace with tactical dossier-style border. Preserve Swiggy booking CTA integration and event description content."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define CSS class for tactical dossier border style with glowing effects. Use box-shadow layers for neon cyan and hot pink glow. Consider corner-accent styling or border-image for tactical aesthetic. Ensure border complements the chromatic aberration headline above."
         }
       ]
     },
     {
-      "id": "REQ-12",
-      "summary": "Fix front page subheading text visibility by improving color contrast",
+      "id": "REQ-20",
+      "summary": "Apply tactical UI corner borders (targeting reticle style) to all container elements throughout the page",
       "acceptanceCriteria": [
-        "All subheading text in the hero section is clearly visible",
-        "Text color provides sufficient contrast ratio against dark background (WCAG AA minimum)",
-        "Neon color accents enhance readability rather than obscure it",
-        "No text is hidden or blends into the background"
+        "All major container elements display corner-only borders",
+        "Borders styled as thin, sharp targeting reticle corners",
+        "Border style consistent across Team, Ticketing, Corporate sections",
+        "Corner borders use neon cyan accent color"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Update the tagline and subheading text colors to use neon green (#39FF14) or hot pink (#FF69B4) with sufficient opacity and add text-shadow effects to ensure all text has clear contrast against the dark background, meeting WCAG AA standards"
+          "description": "Define a reusable CSS class for tactical corner borders using pseudo-elements (::before, ::after) or clip-path. Create thin, sharp corner accents that resemble targeting reticles. Use neon cyan color (#00FFFF or similar) for border color. Ensure corners appear only at element edges without full border lines."
+        },
+        {
+          "path": "frontend/src/components/TeamSection.tsx",
+          "operation": "modify",
+          "description": "Apply tactical corner border class to team member card containers. Ensure corner borders frame each team member dossier without obscuring portraits or text. Maintain existing card layout and content."
+        },
+        {
+          "path": "frontend/src/components/TicketingSection.tsx",
+          "operation": "modify",
+          "description": "Apply tactical corner border class to each ticket tier container. Ensure corner borders complement existing neonGreen/hotPink border styling without conflict. Maintain existing ticket pricing, features, and CTA functionality."
+        },
+        {
+          "path": "frontend/src/components/CorporateEventsSection.tsx",
+          "operation": "modify",
+          "description": "Apply tactical corner border class to service type containers and the main corporate events section container. Ensure corner borders frame content areas cleanly. Preserve existing service descriptions and contact CTA."
+        },
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "modify",
+          "description": "Ensure tactical corner borders integrate with the tactical glowing border from REQ-19. Apply corner accents to complement the dossier frame aesthetic."
         }
       ]
     },
     {
-      "id": "REQ-13",
-      "summary": "Update the Swiggy Scenes ticket booking link to the new URL",
+      "id": "REQ-21",
+      "summary": "Implement random, subtle horizontal line glitches across the background and over images throughout the page",
       "acceptanceCriteria": [
-        "All Swiggy booking buttons and CTAs link to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615",
-        "Links open in a new tab with proper security attributes (rel='noopener noreferrer')",
-        "No broken or outdated Swiggy booking links remain in the codebase"
+        "Horizontal line glitch effects appear randomly across page background",
+        "Glitches overlay images with subtle visual distortion",
+        "Effects are sporadic and unpredictable to create live terminal feel",
+        "Glitches do not obscure text readability or critical content"
       ],
       "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add @keyframes animations for horizontal line glitch effects with randomized positioning and timing. Use linear-gradient or repeating-linear-gradient to create horizontal scan line patterns. Define multiple animation variants with different durations and delays to create unpredictable, sporadic glitch appearance."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a fixed-position overlay div for horizontal line glitch effects. Apply the glitch animation with low opacity to ensure text remains readable. Position overlay above VHS static layer but below content. Use pointer-events-none to prevent interaction blocking."
+        },
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "modify",
+          "description": "Add a pseudo-element or overlay div on the poster image to apply horizontal line glitch effects. Ensure glitches are subtle and do not obscure poster details. Use CSS animation with random timing."
+        },
+        {
+          "path": "frontend/src/components/TeamSection.tsx",
+          "operation": "modify",
+          "description": "Add pseudo-elements to team member portrait images to apply subtle horizontal line glitch overlays. Ensure glitches enhance cyberpunk aesthetic without obscuring faces or names."
+        }
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "summary": "Redesign all interactive buttons to be transparent with neon cyan borders, turning solid hot pink with digital distortion effect on hover",
+      "acceptanceCriteria": [
+        "All buttons display transparent background with neon cyan borders in default state",
+        "On hover, buttons transition to solid hot pink background",
+        "Digital distortion/glitch effect triggers during hover transition",
+        "Button styling consistent across all CTAs (Swiggy booking, navigation, etc.)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GlitchButton.tsx",
+          "operation": "modify",
+          "description": "Redesign button default state to use transparent background with neon cyan (#00FFFF) border. On hover, transition background to solid hot pink (#FF69B4). Add digital distortion/glitch effect on hover using CSS transforms, filters, or text-shadow animations. Ensure transition is smooth with glitch effect trigger. Preserve existing button text and click functionality."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add @keyframes animation for button hover digital distortion effect. Use transform skew, scale, or filter effects to create glitch appearance. Define transition timing for smooth color and effect changes."
+        },
         {
           "path": "frontend/src/components/SwiggyBookingCTA.tsx",
           "operation": "modify",
-          "description": "Update the booking URL to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615 and verify that target='_blank' and rel='noopener noreferrer' attributes are present"
-        },
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Verify and update any hardcoded Swiggy booking links in the hero section to use the new URL https://r.swiggy.com/v1/swiggy/scenes/comms/100052615"
+          "description": "Verify GlitchButton component integration and ensure updated styling applies to Swiggy booking CTA. No structural changes needed if GlitchButton is already used."
         }
       ]
     },
     {
-      "id": "REQ-14",
-      "summary": "Add the Instagram handle @monkeyworxcollective to the footer social media section",
+      "id": "REQ-23",
+      "summary": "Implement fade-in scroll animations with slight vertical jitter effect on all content sections as they enter the viewport",
       "acceptanceCriteria": [
-        "Instagram icon in the footer links to https://instagram.com/monkeyworxcollective",
-        "Link opens in a new tab with proper security attributes",
-        "Instagram handle is displayed or accessible via hover/tooltip if needed",
-        "Icon styling matches existing social media icons in the footer"
+        "Content sections fade in as user scrolls down the page",
+        "Fade-in animation includes slight vertical jitter/shake effect",
+        "Animation creates 'loading terminal data' aesthetic",
+        "Effects apply to Team, Ticketing, Corporate sections and other major content blocks"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Update the Instagram icon link to https://instagram.com/monkeyworxcollective, ensure it opens in a new tab with target='_blank' and rel='noopener noreferrer', and add a title or aria-label attribute with @monkeyworxcollective for accessibility"
+          "description": "Add @keyframes animations for fade-in effect combined with vertical jitter/shake. Define animation to fade from opacity 0 to 1 while applying subtle translateY offset variations to create jitter appearance. Ensure animation resembles 'loading terminal data' aesthetic."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollAnimation.ts",
+          "operation": "create",
+          "description": "Create a custom React hook that uses Intersection Observer API to detect when elements enter the viewport. Return a ref and an inView boolean state. Hook should trigger animation class application when elements become visible during scroll."
+        },
+        {
+          "path": "frontend/src/components/TeamSection.tsx",
+          "operation": "modify",
+          "description": "Import and use the useScrollAnimation hook. Apply the hook's ref to the section container. Conditionally apply fade-in jitter animation class based on inView state. Ensure animation triggers when user scrolls to Team section."
+        },
+        {
+          "path": "frontend/src/components/TicketingSection.tsx",
+          "operation": "modify",
+          "description": "Import and use the useScrollAnimation hook. Apply the hook's ref to the section container. Conditionally apply fade-in jitter animation class based on inView state. Ensure animation triggers when user scrolls to Ticketing section."
+        },
+        {
+          "path": "frontend/src/components/CorporateEventsSection.tsx",
+          "operation": "modify",
+          "description": "Import and use the useScrollAnimation hook. Apply the hook's ref to the section container. Conditionally apply fade-in jitter animation class based on inView state. Ensure animation triggers when user scrolls to Corporate Events section."
+        },
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "modify",
+          "description": "Import and use the useScrollAnimation hook. Apply the hook's ref to the card container. Conditionally apply fade-in jitter animation class based on inView state. Ensure animation triggers when card enters viewport."
+        }
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "summary": "Store uploaded geometric monkey logo (monkeyworx-1.png and monkeyworx-2.png) and Holi Grail poster (Copy of Copy of Grail-1.png) as static assets in frontend/public/assets/generated for use in the logo header and hero section",
+      "acceptanceCriteria": [
+        "monkeyworx-1.png saved to frontend/public/assets/generated/",
+        "Copy of Copy of Grail-1.png saved to frontend/public/assets/generated/",
+        "Logo component references correct path for monkey icon",
+        "Holi Grail card component references correct path for poster image"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/monkeyworx-1.png",
+          "operation": "create",
+          "description": "Copy the uploaded geometric monkey icon (monkeyworx-1.png) to frontend/public/assets/ as a static asset for use in the Navigation logo component."
+        },
+        {
+          "path": "frontend/public/assets/Copy of Copy of Grail (1080 x 1440 px)-1.png",
+          "operation": "create",
+          "description": "Copy the uploaded Holi Grail poster (Copy of Copy of Grail-1.png) to frontend/public/assets/ as a static asset for use in the HoliGrailCard component."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Update the img src attribute to reference /assets/monkeyworx-1.png for the geometric monkey icon. Ensure path is correct for production builds."
+        },
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "modify",
+          "description": "Update the poster img src attribute to reference /assets/Copy of Copy of Grail (1080 x 1440 px)-1.png. Ensure path is correct for production builds and the image displays properly within the tactical dossier border frame."
         }
       ]
     }

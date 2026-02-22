@@ -1,7 +1,32 @@
+import { useEffect, useRef, useState } from 'react';
 import GlitchButton from './GlitchButton';
 import { Check } from 'lucide-react';
 
 export default function TicketingSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const tiers = [
     {
       name: 'THE NOMADS',
@@ -62,7 +87,12 @@ export default function TicketingSection() {
   ];
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-matteBlack via-matteBlack/95 to-matteBlack">
+    <div 
+      ref={sectionRef}
+      className={`py-20 px-4 bg-gradient-to-b from-matteBlack via-matteBlack/95 to-matteBlack transition-all duration-700 ${
+        isVisible ? 'opacity-100 fade-in-jitter' : 'opacity-0'
+      }`}
+    >
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-industrial font-bold tracking-wider text-hotPink mb-4">
@@ -78,9 +108,7 @@ export default function TicketingSection() {
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`relative border-2 ${
-                tier.color === 'neonGreen' ? 'border-neonGreen/30' : 'border-hotPink/30'
-              } bg-matteBlack hover:border-${tier.color} transition-all duration-300 ${
+              className={`relative tactical-border bg-matteBlack transition-all duration-300 ${
                 tier.featured ? 'lg:col-span-1 lg:row-span-1 scale-105' : ''
               }`}
             >

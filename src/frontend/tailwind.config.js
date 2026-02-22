@@ -49,13 +49,6 @@ export default {
                     DEFAULT: 'oklch(var(--card))',
                     foreground: 'oklch(var(--card-foreground))'
                 },
-                chart: {
-                    1: 'oklch(var(--chart-1))',
-                    2: 'oklch(var(--chart-2))',
-                    3: 'oklch(var(--chart-3))',
-                    4: 'oklch(var(--chart-4))',
-                    5: 'oklch(var(--chart-5))'
-                },
                 sidebar: {
                     DEFAULT: 'oklch(var(--sidebar))',
                     foreground: 'oklch(var(--sidebar-foreground))',
@@ -66,6 +59,13 @@ export default {
                     border: 'oklch(var(--sidebar-border))',
                     ring: 'oklch(var(--sidebar-ring))'
                 },
+                chart: {
+                    '1': 'oklch(var(--chart-1))',
+                    '2': 'oklch(var(--chart-2))',
+                    '3': 'oklch(var(--chart-3))',
+                    '4': 'oklch(var(--chart-4))',
+                    '5': 'oklch(var(--chart-5))'
+                },
                 neonGreen: 'oklch(var(--neon-green))',
                 hotPink: 'oklch(var(--hot-pink))',
                 matteBlack: 'oklch(var(--matte-black))'
@@ -75,26 +75,10 @@ export default {
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)'
             },
-            boxShadow: {
-                xs: '0 1px 2px 0 rgba(0,0,0,0.05)'
-            },
             fontFamily: {
-                industrial: ['"Bebas Neue"', '"Impact"', '"Arial Black"', 'sans-serif'],
-                mono: ['"Courier New"', '"Courier"', 'monospace']
-            },
-            keyframes: {
-                'accordion-down': {
-                    from: { height: '0' },
-                    to: { height: 'var(--radix-accordion-content-height)' }
-                },
-                'accordion-up': {
-                    from: { height: 'var(--radix-accordion-content-height)' },
-                    to: { height: '0' }
-                }
-            },
-            animation: {
-                'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out'
+                industrial: ['Arial', 'Helvetica', 'sans-serif'],
+                mono: ['Courier New', 'monospace'],
+                bebas: ['Bebas Neue', 'sans-serif']
             }
         }
     },

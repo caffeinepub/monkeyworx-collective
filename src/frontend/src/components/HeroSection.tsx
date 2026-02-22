@@ -16,16 +16,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center px-4 z-10">
-        <div className="space-y-6 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-industrial font-bold tracking-wider glitch-text text-neonGreen drop-shadow-[0_0_10px_rgba(57,255,20,0.8)]">
-            MONKEYWORX
+        <div className="space-y-8 max-w-5xl">
+          {/* Hero Headline with Chromatic Aberration */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bebas font-bold tracking-wider chromatic-aberration text-white mb-12">
+            THE RARE HOLI GRAIL EVENT
           </h1>
-          <h2 className="text-3xl md:text-5xl font-industrial font-bold tracking-wider text-hotPink drop-shadow-[0_0_10px_rgba(255,105,180,0.8)]">
-            COLLECTIVE & CO.
-          </h2>
-          <p className="text-xl md:text-2xl font-mono uppercase tracking-widest text-neonGreen drop-shadow-[0_0_8px_rgba(57,255,20,0.6)] mt-8">
-            Industrial Cyberpunk / High-end Underground
-          </p>
+          
           <div className="mt-12">
             <SwiggyBookingCTA />
           </div>
