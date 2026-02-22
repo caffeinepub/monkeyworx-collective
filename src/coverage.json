@@ -1,0 +1,109 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T12:26:56.514Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 6,
+    "implemented": 6,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Relocate the MonkeyWorx logo to the top of the page as the primary branding element and add neon glow effects that match the cyberpunk aesthetic",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Adapt the Holi Grail poster design to full cyberpunk styling with improved color arrangement and visibility, ensuring text and elements stand out against the dark background",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HoliGrailCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HoliGrailCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Fix front page subheading text visibility issues by improving color contrast and ensuring all text elements are clearly readable against the dark background",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Update the Swiggy Scenes ticket booking link from the current URL to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615 across all booking CTAs",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SwiggyBookingCTA.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SwiggyBookingCTA.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Add the Instagram handle @monkeyworxcollective to the footer social media section and ensure it links to the correct Instagram profile",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Transform the Holi Grail poster into a card-style booking component with cyberpunk neon glow effects, border highlighting, and elevated card styling that matches the existing neon green (#39FF14) and hot pink (#FF69B4) color scheme",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HoliGrailCard.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HoliGrailCard.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/holi-grail-card.png",
+    "frontend/public/assets/generated/monkeyworx-logo-neon.png",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/HoliGrailCard.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/SwiggyBookingCTA.tsx",
+    "frontend/src/index.css",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

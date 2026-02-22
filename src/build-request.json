@@ -1,0 +1,144 @@
+{
+  "kind": "build_request",
+  "title": "Enhance cyberpunk styling with glowing card-style poster and updated branding",
+  "projectName": "MonkeyWorx Collective",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Transform the Holi Grail poster into a card-style booking component with cyberpunk neon glow effects, border highlighting, and elevated card styling that matches the existing neon green (#39FF14) and hot pink (#FF69B4) color scheme",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "make the holi grail poster like a card style booking tab, add some light, glow to it to match with the cyber punk look that were going with"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Holi Grail poster is displayed as a prominent card component with defined borders",
+        "Card has neon glow effect using CSS box-shadow or border-glow animations",
+        "Styling uses the existing cyberpunk color palette (neon green #39FF14 and hot pink #FF69B4)",
+        "Card has elevated/raised appearance with proper depth and shadow effects"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Relocate the MonkeyWorx logo to the top of the page as the primary branding element and add neon glow effects that match the cyberpunk aesthetic",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "monkeyworx logo has to go on top, its the branding of the company a representation and you can add neon glow to it to match the style"
+        ]
+      },
+      "acceptanceCriteria": [
+        "MonkeyWorx logo is positioned at the top of the page (in hero section or navigation)",
+        "Logo has neon glow effect applied (CSS filter, text-shadow, or drop-shadow)",
+        "Logo remains prominent and clearly visible as the primary brand identifier",
+        "Glow effect uses colors from the cyberpunk palette (neon green or hot pink)"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Adapt the Holi Grail poster design to full cyberpunk styling with improved color arrangement and visibility, ensuring text and elements stand out against the dark background",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "adapt the poster to the cyberpunk style, arrange song colors as the front page sub heading words are not scene, keep the background dark"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Poster maintains dark background consistent with matte black (#000000) theme",
+        "All text elements have sufficient contrast and are clearly readable",
+        "Color scheme uses neon green and hot pink accents throughout the poster",
+        "Layout and typography follow industrial cyberpunk aesthetic with monospaced or industrial fonts"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Fix front page subheading text visibility issues by improving color contrast and ensuring all text elements are clearly readable against the dark background",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "arrange song colors as the front page sub heading words are not scene"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All subheading text in the hero section is clearly visible",
+        "Text color provides sufficient contrast ratio against dark background (WCAG AA minimum)",
+        "Neon color accents enhance readability rather than obscure it",
+        "No text is hidden or blends into the background"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Update the Swiggy Scenes ticket booking link from the current URL to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615 across all booking CTAs",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "here's a link for the tickets : https://r.swiggy.com/v1/swiggy/scenes/comms/100052615"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All Swiggy booking buttons and CTAs link to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615",
+        "Links open in a new tab with proper security attributes (rel='noopener noreferrer')",
+        "No broken or outdated Swiggy booking links remain in the codebase"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Add the Instagram handle @monkeyworxcollective to the footer social media section and ensure it links to the correct Instagram profile",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-changes-1"
+        ],
+        "quotes": [
+          "the instagram id for the company is @monkeyworxcollective"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Instagram icon in the footer links to https://instagram.com/monkeyworxcollective",
+        "Link opens in a new tab with proper security attributes",
+        "Instagram handle is displayed or accessible via hover/tooltip if needed",
+        "Icon styling matches existing social media icons in the footer"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain the existing matte black (#000000) background throughout the site",
+    "Use only neon green (#39FF14) and hot pink (#FF69B4) for accent colors and glow effects",
+    "Preserve the industrial cyberpunk aesthetic with monospaced and industrial fonts",
+    "Do not modify the backend/main.mo file as all functionality is frontend-only",
+    "Keep the existing glitch animation effects and scanline overlays",
+    "Maintain responsive design and mobile menu functionality"
+  ],
+  "nonGoals": [
+    "Changing the overall color scheme beyond the specified neon green and hot pink",
+    "Adding new sections or pages beyond the existing structure",
+    "Implementing backend functionality or database integration",
+    "Adding new ticket tiers or pricing changes",
+    "Modifying team member information or corporate services list",
+    "Changing the fundamental layout structure of existing sections"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Add cyberpunk neon glow effects to the MonkeyWorx logo with enhanced contrast (monkeyworx-logo.png > monkeyworx-logo-neon.png)",
+      "Transform Holi Grail poster into card-style design with neon border glow and improved text visibility (holi-grail-poster.png > holi-grail-card.png)"
+    ]
+  }
+}

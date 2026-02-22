@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0rem;
+        --background: 0 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.05 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.05 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.85 0.35 145;
+        --primary-foreground: 0 0 0;
+        --secondary: 0.75 0.30 340;
+        --secondary-foreground: 0 0 0;
+        --muted: 0.3 0 0;
+        --muted-foreground: 0.6 0 0;
+        --accent: 0.85 0.35 145;
+        --accent-foreground: 0 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.85 0.35 145 / 30%;
+        --input: 0.85 0.35 145 / 30%;
+        --ring: 0.85 0.35 145;
+        --chart-1: 0.85 0.35 145;
+        --chart-2: 0.75 0.30 340;
+        --chart-3: 0.6 0.2 200;
+        --chart-4: 0.7 0.25 60;
+        --chart-5: 0.65 0.22 280;
+        --sidebar: 0 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.85 0.35 145;
+        --sidebar-primary-foreground: 0 0 0;
+        --sidebar-accent: 0.05 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 0.85 0.35 145 / 30%;
+        --sidebar-ring: 0.85 0.35 145;
+        
+        /* Custom Cyberpunk Colors */
+        --neon-green: 0.85 0.35 145;
+        --hot-pink: 0.75 0.30 340;
+        --matte-black: 0 0 0;
+    }
+
+    .dark {
+        --background: 0 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.05 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.05 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.85 0.35 145;
+        --primary-foreground: 0 0 0;
+        --secondary: 0.75 0.30 340;
+        --secondary-foreground: 0 0 0;
+        --muted: 0.3 0 0;
+        --muted-foreground: 0.6 0 0;
+        --accent: 0.85 0.35 145;
+        --accent-foreground: 0 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0 0 0;
+        --border: 0.85 0.35 145 / 30%;
+        --input: 0.85 0.35 145 / 30%;
+        --ring: 0.85 0.35 145;
+        --chart-1: 0.85 0.35 145;
+        --chart-2: 0.75 0.30 340;
+        --chart-3: 0.6 0.2 200;
+        --chart-4: 0.7 0.25 60;
+        --chart-5: 0.65 0.22 280;
+        --sidebar: 0 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.85 0.35 145;
+        --sidebar-primary-foreground: 0 0 0;
+        --sidebar-accent: 0.05 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 0.85 0.35 145 / 30%;
+        --sidebar-ring: 0.85 0.35 145;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Courier New', monospace;
+    }
+}
+
+/* Glitch Text Effect */
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px oklch(var(--neon-green)), -2px -2px oklch(var(--hot-pink));
+    }
+    25% {
+        text-shadow: -2px -2px oklch(var(--neon-green)), 2px 2px oklch(var(--hot-pink));
+    }
+    50% {
+        text-shadow: 2px -2px oklch(var(--hot-pink)), -2px 2px oklch(var(--neon-green));
+    }
+    75% {
+        text-shadow: -2px 2px oklch(var(--hot-pink)), 2px -2px oklch(var(--neon-green));
+    }
+    100% {
+        text-shadow: 2px 2px oklch(var(--neon-green)), -2px -2px oklch(var(--hot-pink));
+    }
+}
+
+.glitch-text {
+    animation: glitch 3s infinite;
+}
+
+/* Glitch Button Effect */
+.glitch-button {
+    position: relative;
+    z-index: 10;
+}
+
+/* Glitch Image Effect */
+@keyframes glitch-image {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+.glitch-image:hover {
+    animation: glitch-image 0.3s infinite;
+}
+
+/* Scanlines Effect */
+@keyframes scanlines {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.scanlines {
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(57, 255, 20, 0.03) 0px,
+        rgba(57, 255, 20, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    animation: scanlines 8s linear infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Neon Pulse Animation for Card */
+@keyframes neon-pulse {
+    0%, 100% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* Logo Neon Glow Effect */
+.logo-neon-glow {
+    filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.8)) 
+            drop-shadow(0 0 16px rgba(57, 255, 20, 0.5))
+            drop-shadow(0 0 24px rgba(57, 255, 20, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.logo-neon-glow:hover {
+    filter: drop-shadow(0 0 12px rgba(57, 255, 20, 1)) 
+            drop-shadow(0 0 24px rgba(57, 255, 20, 0.7))
+            drop-shadow(0 0 36px rgba(57, 255, 20, 0.5));
+}
+
+/* Cyberpunk Card Styling */
+.cyberpunk-card {
+    position: relative;
+}
+
+.cyberpunk-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        oklch(var(--neon-green)), 
+        oklch(var(--hot-pink)), 
+        oklch(var(--neon-green)));
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.cyberpunk-card:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: oklch(var(--matte-black));
+}
+
+::-webkit-scrollbar-thumb {
+    background: oklch(var(--neon-green) / 50%);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: oklch(var(--neon-green));
+}

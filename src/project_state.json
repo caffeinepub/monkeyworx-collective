@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "MONKEYWORX COLLECTIVE website - industrial cyberpunk aesthetic with matte black background, neon green and hot pink accents. Features: team dossier grid, Holi Grail ticket tiers (5 levels from ₹449 to ₹78,999), corporate events page, hero video with glitch effects, and Swiggy Scenes booking integration.",
+  "architectural_notes": [
+    "Industrial cyberpunk design: matte black (#000000) background with neon green (#39FF14) and hot pink (#FF69B4) accents",
+    "Typography: Industrial sans-serif and monospaced system fonts for technical aesthetic",
+    "Glitch effects throughout UI for cyberpunk atmosphere",
+    "Responsive design for team grid, ticketing tiers, and events sections",
+    "Card-style UI components with neon glow effects for cyberpunk aesthetic",
+    "Logo positioning at top as primary branding element with enhanced visibility"
+  ],
+  "known_issues": [],
+  "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Add cyberpunk neon glow effects to the MonkeyWorx logo with enhanced contrast (monkeyworx-logo.png > monkeyworx-logo-neon.png)\n- Transform Holi Grail poster into card-style design with neon border glow and improved text visibility (holi-grail-poster.png > holi-grail-card.png)",
+  "existing_features": [
+    {
+      "id": "feature-establish-global-design-system-with-matte-black-000000-background-neon-green-39ff14-and-hot-pink-ff69b4-accent-colors-industrial-sans-serif-and-monospaced-system-fonts-throughout-the-application",
+      "title": "Establish global design system with matte black (#000000) background, neon green (#39FF14) and hot pink (#FF69B4) accent colors, industrial sans-serif and monospaced system fonts throughout the application",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-hero-section-with-autoplay-video-background-showing-strobe-lit-warehouse-rave-footage",
+      "title": "Create hero section with autoplay video background showing strobe-lit warehouse rave footage",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-floating-sticky-navigation-menu-that-remains-visible-on-scroll",
+      "title": "Implement floating sticky navigation menu that remains visible on scroll",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-team-section-displaying-4-members-vikram-founder-chief-visionary-sunny-head-of-vigilance-hospitality-dev-tactical-lead-operations-aleena-media-communications-in-a-tactical-dossier-grid-layout-with-monochrome-glitch-portrait-placeholders",
+      "title": "Create Team section displaying 4 members (Vikram - Founder/Chief Visionary, Sunny - Head of Vigilance & Hospitality, Dev - Tactical Lead/Operations, Aleena - Media & Communications) in a tactical dossier grid layout with monochrome glitch portrait placeholders",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-holi-grail-ticketing-protocol-section-with-5-ticket-tiers-the-nomads-449-entry-only-the-seekers-1-149-1-699-entry-1-beer-1-color-packet-phased-pricing-the-alchemists-2-249-priority-entry-2-beers-unlimited-colors-king-s-court-vip-table-for-5-44-999-elevated-deck-1-bottle-starters-service-security-unlimited-colors-king-s-court-vip-table-for-10-78-999-same-as-5-person-with-2-bottles",
+      "title": "Build Holi Grail Ticketing Protocol section with 5 ticket tiers: THE NOMADS (₹449 - Entry Only), THE SEEKERS (₹1,149-₹1,699 - Entry + 1 Beer + 1 Color Packet, phased pricing), THE ALCHEMISTS (₹2,249 - Priority Entry + 2 Beers + Unlimited Colors), KING'S COURT VIP Table for 5 (₹44,999 - Elevated Deck + 1 Bottle + Starters + Service + Security + Unlimited Colors), KING'S COURT VIP Table for 10 (₹78,999 - Same as 5-person with 2 Bottles)",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-corporate-events-page-with-headline-professional-grade-chaos-listing-services-concerts-weddings-corporate-parties-private-events-corporate-perks-section-mentioning-bulk-discounts-and-contact-cta-with-phone-number-91-63633-53339",
+      "title": "Create Corporate & Events page with headline 'PROFESSIONAL GRADE CHAOS', listing services (Concerts, Weddings, Corporate Parties, Private Events), corporate perks section mentioning bulk discounts, and contact CTA with phone number +91 63633 53339",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-glitch-animation-effect-on-all-interactive-buttons-that-triggers-on-hover",
+      "title": "Implement glitch animation effect on all interactive buttons that triggers on hover",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-prominent-cta-button-labeled-book-tickets-via-swiggy-scenes-that-links-to-swiggy-scenes-booking-page",
+      "title": "Add prominent CTA button labeled 'BOOK TICKETS VIA SWIGGY SCENES' that links to Swiggy Scenes booking page",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-transform-the-holi-grail-poster-into-a-card-style-booking-component-with-cyberpunk-neon-glow-effects-border-highlighting-and-elevated-card-styling-that-matches-the-existing-neon-green-39ff14-and-hot-pink-ff69b4-color-scheme",
+      "title": "Transform the Holi Grail poster into a card-style booking component with cyberpunk neon glow effects, border highlighting, and elevated card styling that matches the existing neon green (#39FF14) and hot pink (#FF69B4) color scheme",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-relocate-the-monkeyworx-logo-to-the-top-of-the-page-as-the-primary-branding-element-and-add-neon-glow-effects-that-match-the-cyberpunk-aesthetic",
+      "title": "Relocate the MonkeyWorx logo to the top of the page as the primary branding element and add neon glow effects that match the cyberpunk aesthetic",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adapt-the-holi-grail-poster-design-to-full-cyberpunk-styling-with-improved-color-arrangement-and-visibility-ensuring-text-and-elements-stand-out-against-the-dark-background",
+      "title": "Adapt the Holi Grail poster design to full cyberpunk styling with improved color arrangement and visibility, ensuring text and elements stand out against the dark background",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-front-page-subheading-text-visibility-issues-by-improving-color-contrast-and-ensuring-all-text-elements-are-clearly-readable-against-the-dark-background",
+      "title": "Fix front page subheading text visibility issues by improving color contrast and ensuring all text elements are clearly readable against the dark background",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-swiggy-scenes-ticket-booking-link-from-the-current-url-to-https-r-swiggy-com-v1-swiggy-scenes-comms-100052615-across-all-booking-ctas",
+      "title": "Update the Swiggy Scenes ticket booking link from the current URL to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615 across all booking CTAs",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-instagram-handle-monkeyworxcollective-to-the-footer-social-media-section-and-ensure-it-links-to-the-correct-instagram-profile",
+      "title": "Add the Instagram handle @monkeyworxcollective to the footer social media section and ensure it links to the correct Instagram profile",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Team dossier grid with monochrome glitch portraits for 4 team members",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Holi Grail ticketing protocol page with 5 tier levels and pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Corporate events page with services list and contact CTA",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Hero video section with strobe-lit warehouse rave footage",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Floating sticky navigation menu",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Glitch animation effects on button hover states",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Primary CTA button linking to Swiggy Scenes booking",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Transform Holi Grail poster into glowing card-style booking tab with cyberpunk neon effects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Move MonkeyWorx logo to top of page as primary branding with neon glow effects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Fix front page subheading text visibility and color contrast",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Update ticket booking link to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add Instagram handle @monkeyworxcollective to site",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "MONKEYWORX COLLECTIVE",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

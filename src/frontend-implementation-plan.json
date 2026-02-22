@@ -1,0 +1,128 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Enhance cyberpunk styling with glowing card-style poster and updated branding",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Transform the Holi Grail poster into a card-style booking component with cyberpunk neon glow effects",
+      "acceptanceCriteria": [
+        "Holi Grail poster is displayed as a prominent card component with defined borders",
+        "Card has neon glow effect using CSS box-shadow or border-glow animations",
+        "Styling uses the existing cyberpunk color palette (neon green #39FF14 and hot pink #FF69B4)",
+        "Card has elevated/raised appearance with proper depth and shadow effects"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "create",
+          "description": "Create a new card-style component for the Holi Grail poster featuring the edited image frontend/public/assets/holi-grail-card.png with cyberpunk card styling including elevated shadow effects, neon border glow using box-shadow with #39FF14 and #FF69B4, and a booking CTA button that uses the SwiggyBookingCTA component"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the new HoliGrailCard component between the HeroSection and TeamSection, creating a dedicated section for the Holi Grail event booking"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframe animations for pulsing neon glow effects on card borders and define utility classes for the cyberpunk card elevation with layered shadows"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Relocate the MonkeyWorx logo to the top of the page as the primary branding element with neon glow effects",
+      "acceptanceCriteria": [
+        "MonkeyWorx logo is positioned at the top of the page (in hero section or navigation)",
+        "Logo has neon glow effect applied (CSS filter, text-shadow, or drop-shadow)",
+        "Logo remains prominent and clearly visible as the primary brand identifier",
+        "Glow effect uses colors from the cyberpunk palette (neon green or hot pink)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Add the MonkeyWorx logo using the edited image frontend/public/assets/monkeyworx-logo-neon.png at the left side of the navigation bar with proper sizing and neon glow CSS filter using drop-shadow with #39FF14"
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Remove or reduce prominence of the existing MONKEYWORX text branding since the logo now serves as the primary brand identifier in the navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Adapt the Holi Grail poster design to full cyberpunk styling with improved color arrangement and visibility",
+      "acceptanceCriteria": [
+        "Poster maintains dark background consistent with matte black (#000000) theme",
+        "All text elements have sufficient contrast and are clearly readable",
+        "Color scheme uses neon green and hot pink accents throughout the poster",
+        "Layout and typography follow industrial cyberpunk aesthetic with monospaced or industrial fonts"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HoliGrailCard.tsx",
+          "operation": "modify",
+          "description": "Ensure the card component uses dark matte black background (#000000), applies neon green (#39FF14) and hot pink (#FF69B4) text accents for event details, and uses industrial/monospaced fonts from the Tailwind config for all text overlays on the poster image"
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Fix front page subheading text visibility by improving color contrast",
+      "acceptanceCriteria": [
+        "All subheading text in the hero section is clearly visible",
+        "Text color provides sufficient contrast ratio against dark background (WCAG AA minimum)",
+        "Neon color accents enhance readability rather than obscure it",
+        "No text is hidden or blends into the background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Update the tagline and subheading text colors to use neon green (#39FF14) or hot pink (#FF69B4) with sufficient opacity and add text-shadow effects to ensure all text has clear contrast against the dark background, meeting WCAG AA standards"
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Update the Swiggy Scenes ticket booking link to the new URL",
+      "acceptanceCriteria": [
+        "All Swiggy booking buttons and CTAs link to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615",
+        "Links open in a new tab with proper security attributes (rel='noopener noreferrer')",
+        "No broken or outdated Swiggy booking links remain in the codebase"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SwiggyBookingCTA.tsx",
+          "operation": "modify",
+          "description": "Update the booking URL to https://r.swiggy.com/v1/swiggy/scenes/comms/100052615 and verify that target='_blank' and rel='noopener noreferrer' attributes are present"
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Verify and update any hardcoded Swiggy booking links in the hero section to use the new URL https://r.swiggy.com/v1/swiggy/scenes/comms/100052615"
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Add the Instagram handle @monkeyworxcollective to the footer social media section",
+      "acceptanceCriteria": [
+        "Instagram icon in the footer links to https://instagram.com/monkeyworxcollective",
+        "Link opens in a new tab with proper security attributes",
+        "Instagram handle is displayed or accessible via hover/tooltip if needed",
+        "Icon styling matches existing social media icons in the footer"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the Instagram icon link to https://instagram.com/monkeyworxcollective, ensure it opens in a new tab with target='_blank' and rel='noopener noreferrer', and add a title or aria-label attribute with @monkeyworxcollective for accessibility"
+        }
+      ]
+    }
+  ]
+}

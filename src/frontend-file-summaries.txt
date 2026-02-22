@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the complete MONKEYWORX COLLECTIVE website with navigation, hero, new Holi Grail card section, team, ticketing, corporate events sections, and footer.",
+  "frontend/src/components/Navigation.tsx": "Sticky navigation bar with MonkeyWorx logo featuring neon glow effects at the top left, smooth scroll links to all sections, and mobile menu support with cyberpunk styling.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with video placeholder background, brand title with enhanced glitch effects and improved text visibility using drop shadows, and primary Swiggy booking CTA.",
+  "frontend/src/components/SwiggyBookingCTA.tsx": "Prominent call-to-action button component that links to the updated Swiggy Scenes booking URL (https://r.swiggy.com/v1/swiggy/scenes/comms/100052615) with glitch hover effects.",
+  "frontend/src/components/GlitchButton.tsx": "Reusable button component with cyberpunk glitch animation on hover, neon green to hot pink color transition.",
+  "frontend/src/components/TeamSection.tsx": "Tactical dossier grid displaying 4 team members with monochrome portraits, glitch effects, and military-style card design.",
+  "frontend/src/components/TicketingSection.tsx": "Holi Grail ticketing protocol section displaying 5 ticket tiers from ₹449 to ₹78,999 with complete pricing and features.",
+  "frontend/src/components/CorporateEventsSection.tsx": "Corporate events page with \"Professional Grade Chaos\" headline, services grid, bulk discount info, and contact CTA with phone number.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand info, quick links, social media icons including updated Instagram link to @monkeyworxcollective, contact details, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/index.css": "Global styles with OKLCH color system, cyberpunk effects including new neon pulse animations for cards, logo glow effects, enhanced glitch animations, scanlines, and gradient shift animations for the card borders.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom cyberpunk colors (neonGreen, hotPink, matteBlack), industrial sans-serif and monospaced fonts, and zero border radius for sharp edges.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as backend has no data operations; all content is static client-side.",
+  "frontend/src/components/HoliGrailCard.tsx": "New cyberpunk-styled card component featuring the Holi Grail event poster with animated neon glow borders, event details, and integrated Swiggy booking CTA."
+}
